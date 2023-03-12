@@ -1,9 +1,8 @@
 body {
    background-color: #f6f6ed;
 }
-
-.bayan-container {
-    margin: 20px 0;
+.bayan-container{
+    flex: content;
 }
 .bayan-container .bayan-body {
     width: calc(100% - 40px);
@@ -34,7 +33,6 @@ body {
     box-sizing: border-box;
     z-index: 100;
     font-family: Verdana, sans-serif;   
-    font-size: 18px;
     margin: 0 0 5px;
     transition: color .5s;
 }
