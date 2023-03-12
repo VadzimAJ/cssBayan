@@ -111,7 +111,7 @@ h1{
     transform: scale(1);
     transition: 0.5s;
 }
-.bayan-container input:hover + label + .bayan-body {
+.bayan-container label:hover{
     color: #000;
 }
 
