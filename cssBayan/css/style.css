@@ -51,9 +51,6 @@
          url('../assets/fonts/inika-v21-latin-700.svg#Inika') format('svg'); /* Legacy iOS */
   }
 
-* {
-    box-sizing: border-box;
-}
   html{
     scroll-behavior: smooth;
   }
@@ -92,22 +89,36 @@ h1{
 }
 .bayan-container label {
     cursor: pointer;
-    background-color: #dadad2;
     padding: 2vh 5vh;
     font-family: 'Inika';   
     font-size: 3vh;
     margin: 0 0 2vh;
+    color: blue;
+    font-weight: bold;
+    border-top: 2px solid rgb(203, 199, 199);
 }
 .bayan-container input{
     display: none;
 }
-img{
-    height: 2em;
+.bayan-body{
+    transform: scale(.1);
+    height: 20em;
 }
 
 .bayan-container input:hover + label + .bayan-body {
     height: auto;
     color: #000;
-    transform: scale(9.1);
+    transform: scale(1);
     transition: 0.5s;
+}
+.bayan-container input:hover + label + .bayan-body {
+    color: #000;
+}
+
+.bayan-container input:checked{
+    transform: scale(1);   
+}
+
+<hr>{
+    color: #000;
 }
