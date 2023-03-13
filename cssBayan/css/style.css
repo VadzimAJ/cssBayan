@@ -1,0 +1,214 @@
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/inter-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/inter-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/inter-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/inter-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/inter-v12-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/inter-v12-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/inter-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/inter-v12-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/inter-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/inter-v12-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
+  }
+/* inika-regular - latin */
+@font-face {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/inika-v21-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/inika-v21-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/inika-v21-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/inika-v21-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/inika-v21-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/inika-v21-latin-regular.svg#Inika') format('svg'); /* Legacy iOS */
+  }
+  /* inika-700 - latin */
+  @font-face {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/inika-v21-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../assets/fonts/inika-v21-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/inika-v21-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/inika-v21-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/inika-v21-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/inika-v21-latin-700.svg#Inika') format('svg'); /* Legacy iOS */
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+body {
+    max-width: 80vh;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    background-color: #f6f6ed;
+}
+h1{
+    text-align: center;
+    font-size: 10vh;
+    color:#f6e675;
+    text-shadow: 0 1vh 2vh rgba(0,1,1,1);
+    -webkit-text-stroke: .1vh black;
+}
+.bayan-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 120em;
+}
+
+.bayan-container :only-child{
+    margin: auto;
+}
+
+.bayan-container .bayan-body {
+    margin: 0 auto;
+    height: 0;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: 'Inika'; 
+}
+.bayan-container label {
+    cursor: pointer;
+    padding: 2vh 5vh;
+    font-family: 'Inika';   
+    font-size: 3vh;
+    margin: 0 0 2vh;
+    color: blue;
+    font-weight: bold;
+    border-top: .2vh solid rgb(203, 199, 199);
+    text-shadow: 0 1vh 1vh rgba(0,1,1,.4);
+}
+.bayan-container input{
+    display: none;
+}
+.bayan-body{
+    transform: scale(.1);
+}
+
+img{
+    width: 40em;
+}
+
+@media (min-height: 768px) and (hover: hover) and (pointer: fine) {
+    #bayan1:checked {
+        opacity: 1;
+        transform: scale(1);
+        transition: 0.1s;
+    }
+
+    .bayan-container input:hover + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:hover{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:hover + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+    input:checked{
+        transform: scale(1);
+    }
+}
+  
+ @media (width: 820px) and (hover: none) and (pointer: coarse){
+    body {
+        max-width: 60vh;
+    }
+
+    h1{
+        font-size: 8vh;
+    }
+
+    img{
+        width: 30em;
+    }
+
+    .bayan-container label {
+        margin: 0 0 2vh;
+        color: blue;
+        font-weight: bold;
+    }
+
+    
+    .bayan-container input:checked + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:checked{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:checked + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+
+  }
+
+  @media (max-width: 320px) and (hover: none) and (pointer: coarse){
+    
+    h1{
+        font-size: 4vh;
+    }
+
+    .bayan-container label {
+        margin: 0 0 2vh;
+        font-size: 2vh;
+        color: blue;
+        font-weight: bold;
+    }
+
+    
+    .bayan-container input:checked + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:checked{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:checked + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+
+    img{
+        width: 17em;
+    }
+
+  }
