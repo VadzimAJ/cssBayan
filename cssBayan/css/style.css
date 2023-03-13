@@ -109,7 +109,7 @@ h1{
 }
 
 img{
-    width: 45em;
+    width: 40em;
 }
 
 @media (min-height: 768px) and (hover: hover) and (pointer: fine) {
