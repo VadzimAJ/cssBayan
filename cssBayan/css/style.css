@@ -76,7 +76,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    height: 100em;
+    height: 120em;
 }
 
 .bayan-container :only-child{
@@ -109,24 +109,106 @@ h1{
 }
 
 img{
-    height: 20em;
+    width: 45em;
 }
 
-.bayan-container input:hover + label + .bayan-body {
-    height: auto;
-    transform: scale(1);
-    transition: 0.5s;
+@media (min-height: 768px) and (hover: hover) and (pointer: fine) {
+    #bayan1:checked {
+        opacity: 1;
+        transform: scale(1);
+        transition: 0.1s;
+    }
+
+    .bayan-container input:hover + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:hover{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:hover + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+    input:checked{
+        transform: scale(1);
+    }
+}
+  
+ @media (width: 820px) and (hover: none) and (pointer: coarse){
+    body {
+        max-width: 60vh;
+    }
+
+    h1{
+        font-size: 8vh;
+    }
+
+    img{
+        width: 30em;
+    }
+
+    .bayan-container label {
+        margin: 0 0 2vh;
+        color: blue;
+        font-weight: bold;
+    }
+
     
-}
-.bayan-container label:hover{
-    color: #000;
-    border-top: .2vh solid rgb(2, 2, 2);
-    -webkit-text-stroke: .04vh whitesmoke;
-}
-.bayan-container:hover + .bayan-container:only-child{
-    color: #000;
-    border-top: .2vh solid rgb(2, 2, 2);
-}
-input:checked{
-    transform: scale(1);
-}
+    .bayan-container input:checked + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:checked{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:checked + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+
+  }
+
+  @media (max-width: 320px) and (hover: none) and (pointer: coarse){
+    
+    h1{
+        font-size: 4vh;
+    }
+
+    .bayan-container label {
+        margin: 0 0 2vh;
+        font-size: 2vh;
+        color: blue;
+        font-weight: bold;
+    }
+
+    
+    .bayan-container input:checked + label + .bayan-body {
+        height: auto;
+        transform: scale(1);
+        transition: 0.5s;
+        
+    }
+    .bayan-container label:checked{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+        -webkit-text-stroke: .04vh whitesmoke;
+    }
+    .bayan-container:checked + .bayan-container:only-child{
+        color: #000;
+        border-top: .2vh solid rgb(2, 2, 2);
+    }
+
+    img{
+        width: 17em;
+    }
+
+  }
